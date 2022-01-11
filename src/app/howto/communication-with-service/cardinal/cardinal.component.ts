@@ -12,13 +12,17 @@ export class CardinalComponent implements OnInit {
   constructor(private commonSharedService: ComponentCommonSharedService) {}
 
   ngOnInit() {
+    // When the component initializes listen for incomming messages
     this.commonSharedService.currentMessage.subscribe((message) => {
       if (!message || message == '') {
+        // We didn't hear a valid message
         return;
       }
 
+      // We heard a valid message
       console.log(`Cardinal heard message '${message}'`);
 
+      // React to the message
       if (message === 'tweet' || message === 'peep' || message === 'td') {
         this.whatIHeard = message;
       } else {

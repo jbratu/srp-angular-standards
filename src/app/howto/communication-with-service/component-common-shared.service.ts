@@ -11,6 +11,9 @@ export class ComponentCommonSharedService {
 
   constructor() {}
 
+  /*
+    Users of this service can send messages to any component that has subscribed to the currentMessage observable.
+  */
   changeMessage(message: string) {
     console.log(`Change message received: ${message}`);
     this.messageSource.next(message);
