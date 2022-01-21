@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./howto.component.css'],
 })
 export class HowtoComponent implements OnInit {
+  // Set to the default how-to to show or '' to select.
+  // selectedHowTo = 'set-style-code';
   selectedHowTo = '';
 
   constructor() {}

@@ -21,4 +21,8 @@ export class SetStyleFromCodeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.testParagraph.nativeElement.style['background-color'] = 'red';
   }
+
+  setClass() {
+    this.testParagraph.nativeElement.className = 'my-style';
+  }
 }

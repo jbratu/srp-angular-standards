@@ -1,6 +1,12 @@
 <div class="component">
   <h2>Set Style From Code</h2>
   <p #testParagraph style="background-color: yellow;">
-    I start out yellow but change to red using code
+    I start out yellow but change to red using style code. The botton sets a
+    class.
   </p>
+  <input
+    type="button"
+    value="Set Class Style Using Code"
+    (click)="setClass()"
+  />
 </div>
