@@ -1,3 +1,15 @@
-<app-communication-with-service></app-communication-with-service>
+<select name="howto-selector" (change)="selectHowto($event)">
+  <option value="none">Select a How-To</option>
+  <option value="comp-comm">
+    Communication Between Components with Service
+  </option>
+  <option value="set-style-code">Set Element Style Using Code</option>
+</select>
 
-<app-set-style-from-code></app-set-style-from-code>
+<app-communication-with-service
+  *ngIf="selectedHowTo === 'comp-comm'"
+></app-communication-with-service>
+
+<app-set-style-from-code
+  *ngIf="selectedHowTo === 'set-style-code'"
+></app-set-style-from-code>
