@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { CommunicationWithServiceComponent } from './howto/communication-with-service/communication-with-service.component';
 import { CardinalComponent } from './howto/communication-with-service/cardinal/cardinal.component';
 import { SparrowComponent } from './howto/communication-with-service/sparrow/sparrow.component';
+import { SetStyleFromCodeComponent } from './howto/set-style-from-code/set-style-from-code.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -14,6 +15,7 @@ import { SparrowComponent } from './howto/communication-with-service/sparrow/spa
     AppComponent,
     HelloComponent,
     CommunicationWithServiceComponent,
+    SetStyleFromCodeComponent,
     CardinalComponent,
     SparrowComponent,
   ],
