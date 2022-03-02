@@ -1,0 +1,35 @@
+<div class="component">
+  <h2>Control Error Message</h2>
+
+  <p>This shows a custom error message in a validator by:</p>
+  <ol>
+    <li>
+      The directive appControlErrorMessage listens to validation changes on the
+      control.
+    </li>
+    <li>
+      The validator validatorCustomMessage performs the validation on the
+      control and in the process returns an error with the reason why validation
+      failed.
+    </li>
+    <li>
+      The appControlErrorMessage receives the event and appends HTML after the
+      control to show the error.
+    </li>
+    <li>
+      When appControlErrorMessage receives a valid status it clears the HTML by
+      finding it with a CSS query selector.
+    </li>
+  </ol>
+
+  <form [formGroup]="myForm">
+    <label for="input-value">Enter The Number 42:</label>
+    <input
+      type="text"
+      id="input-value"
+      name="Input Value"
+      formControlName="theAnswer"
+      appControlErrorMessage
+    />
+  </form>
+</div>

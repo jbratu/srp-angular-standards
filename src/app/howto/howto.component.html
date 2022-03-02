@@ -4,6 +4,7 @@
     Communication Between Components with Service
   </option>
   <option value="set-style-code">Set Element Style Using Code</option>
+  <option value="control-error-message">Control Error Message</option>
 </select>
 
 <app-communication-with-service
@@ -13,3 +14,6 @@
 <app-set-style-from-code
   *ngIf="selectedHowTo === 'set-style-code'"
 ></app-set-style-from-code>
+
+<app-control-error-message *ngIf="selectedHowTo === 'control-error-message'">
+</app-control-error-message>

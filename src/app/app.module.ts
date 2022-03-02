@@ -9,9 +9,12 @@ import { CardinalComponent } from './howto/communication-with-service/cardinal/c
 import { SparrowComponent } from './howto/communication-with-service/sparrow/sparrow.component';
 import { SetStyleFromCodeComponent } from './howto/set-style-from-code/set-style-from-code.component';
 import { HowtoComponent } from './howto/howto.component';
+import { ControlErrorMessageDirective } from './howto/control-error-message/control-error-message.directive';
+import { ControlErrorMessageComponent } from './howto/control-error-message/control-error-message.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -20,6 +23,8 @@ import { HowtoComponent } from './howto/howto.component';
     SetStyleFromCodeComponent,
     CardinalComponent,
     SparrowComponent,
+    ControlErrorMessageComponent,
+    ControlErrorMessageDirective,
   ],
   bootstrap: [AppComponent],
 })

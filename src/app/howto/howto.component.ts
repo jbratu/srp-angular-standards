@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowtoComponent implements OnInit {
   // Set to the default how-to to show or '' to select.
-  // selectedHowTo = 'set-style-code';
+  //selectedHowTo = 'control-error-message';
   selectedHowTo = '';
 
   constructor() {}
