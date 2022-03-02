@@ -17,8 +17,6 @@ export class ControlErrorMessageDirective implements OnInit {
   ngOnInit() {
     const abstractControl = this.control.control;
 
-    console.log(`appControlErrorMessage onInit`);
-
     // On create of our directive listen for notification about the validation state of our control
     abstractControl.statusChanges.subscribe((newStatus) => {
       // Get a handle to the control our directive was added too
