@@ -1,11 +1,14 @@
 <div class="component">
   <h2>Control Error Message</h2>
 
-  <p>This shows a custom error message in a validator by:</p>
+  <p>
+    This shows a custom error message in a validator by adding a single
+    directive to a control:
+  </p>
   <ol>
+    <li>The directive appControlErrorMessage is added to the control.</li>
     <li>
-      The directive appControlErrorMessage listens to validation changes on the
-      control.
+      appControlErrorMessage listens to validation changes on the control.
     </li>
     <li>
       The validator validatorCustomMessage performs the validation on the
