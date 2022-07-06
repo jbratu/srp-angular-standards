@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HowtoComponent implements OnInit {
   // Set to the default how-to to show or '' to select.
   //selectedHowTo = 'control-error-message';
-  selectedHowTo = '';
+  selectedHowTo = 'http-api-calls';
 
   constructor() {}
 

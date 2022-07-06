@@ -6,6 +6,7 @@
   </option>
   <option value="set-style-code">Set Element Style Using Code</option>
   <option value="control-error-message">Control Error Message</option>
+  <option value="http-api-calls">HTTP API Calls</option>
 </select>
 
 <app-communication-with-service
@@ -15,6 +16,10 @@
 <app-set-style-from-code
   *ngIf="selectedHowTo === 'set-style-code'"
 ></app-set-style-from-code>
+
+<app-http-api-calls
+  *ngIf="selectedHowTo === 'http-api-calls'"
+></app-http-api-calls>
 
 <app-control-error-message *ngIf="selectedHowTo === 'control-error-message'">
 </app-control-error-message>
