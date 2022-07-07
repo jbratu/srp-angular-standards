@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-http-api-calls',
@@ -11,11 +11,22 @@ export class HttpApiCallsComponent implements OnInit {
 
   ngOnInit() {
     console.log(`In ngOnInit`);
+
+    let httpOptions = {
+      responseType: 'text',
+    };
+
+    const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
     this.http
-      .get('https://dev.pathtaken.com/iisstart.htm')
+      .get(url, {
+        responseType: 'text',
+        observe: 'response',
+      })
       .subscribe((data) => {
         console.log(`In get.subscribe`);
-        console.log(data);
+
+        console.log(data.body);
       });
   }
 }
