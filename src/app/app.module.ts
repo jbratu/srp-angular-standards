@@ -28,8 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     CardinalComponent,
     SparrowComponent,
     ControlErrorMessageComponent,
-    ControlErrorMessageDirective,
-    HttpApiCallsComponent,
+    ControlErrorMessageDirective
   ],
   bootstrap: [AppComponent],
 })
