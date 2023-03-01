@@ -16,9 +16,10 @@ import { ControlErrorMessageDirective } from './howto/control-error-message/cont
 import { ControlErrorMessageComponent } from './howto/control-error-message/control-error-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, StoreModule.forRoot({}, {})],
   declarations: [
     AppComponent,
     HelloComponent,
