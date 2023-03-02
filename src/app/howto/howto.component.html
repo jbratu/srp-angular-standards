@@ -7,6 +7,7 @@
   <option value="set-style-code">Set Element Style Using Code</option>
   <option value="control-error-message">Control Error Message</option>
   <option value="http-api-calls">HTTP API Calls</option>
+  <option value="state-with-ngrx">Manage State With NgRx</option>
 </select>
 
 <app-communication-with-service
@@ -23,3 +24,20 @@
 
 <app-control-error-message *ngIf="selectedHowTo === 'control-error-message'">
 </app-control-error-message>
+
+<div *ngIf="selectedHowTo === 'state-with-ngrx'">
+  <h2>Books</h2>
+  <app-book-list
+    class="book-list"
+    [books]="(books$ | async)!"
+    (add)="onAdd($event)"
+  ></app-book-list>
+
+  <h2>My Collection</h2>
+  <app-book-collection
+    class="book-collection"
+    [books]="(bookCollection$ | async)!"
+    (remove)="onRemove($event)"
+  >
+  </app-book-collection>
+</div>

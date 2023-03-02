@@ -1,4 +1,7 @@
 {
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.tabSize": 2
   // "editor.theme": "vs-dark",
   /**
    * Render vertical lines at the specified columns.
