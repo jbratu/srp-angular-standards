@@ -19,8 +19,9 @@ import { ControlErrorMessageComponent } from "./howto/control-error-message/cont
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { StoreModule } from "@ngrx/store";
-import { BookListComponent } from './howto/manage-state-with-ngrx/book-list/book-list.component';
-import { BookCollectionComponent } from './howto/manage-state-with-ngrx/book-collection/book-collection.component';
+import { BookListComponent } from "./howto/manage-state-with-ngrx/book-list/book-list.component";
+import { BookCollectionComponent } from "./howto/manage-state-with-ngrx/book-collection/book-collection.component";
+import { refreshReducer } from "./state/refresh/refresh.reducer";
 
 @NgModule({
   imports: [
@@ -29,7 +30,11 @@ import { BookCollectionComponent } from './howto/manage-state-with-ngrx/book-col
     ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot(
-      { books: booksReducer, collection: collectionReducer },
+      {
+        books: booksReducer,
+        collection: collectionReducer,
+        refresh: refreshReducer,
+      },
       {}
     ),
   ],

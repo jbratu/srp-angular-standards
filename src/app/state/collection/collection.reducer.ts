@@ -14,5 +14,8 @@ export const collectionReducer = createReducer(
     if (state.indexOf(bookId) > -1) return state;
 
     return [...state, bookId];
+  }),
+  on(BooksActions.deleteCollection, (_state) => {
+    return [];
   })
 );

@@ -6,6 +6,7 @@ import {
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { GoogleBooksService } from "./manage-state-with-ngrx/books.service";
+import { selectRefresh } from "../state/refresh/refresh.selectors";
 
 @Component({
   selector: "app-howto",
@@ -20,6 +21,7 @@ export class HowtoComponent implements OnInit {
   // NgRx specific variables to showcase functionality
   books$ = this.store.select(selectBooks);
   bookCollection$ = this.store.select(selectBookCollection);
+  refreshState$ = this.store.select(selectRefresh);
 
   constructor(private booksService: GoogleBooksService, private store: Store) {}
 
