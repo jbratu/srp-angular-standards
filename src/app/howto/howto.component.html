@@ -26,6 +26,10 @@
 </app-control-error-message>
 
 <div *ngIf="selectedHowTo === 'state-with-ngrx'">
+  <p>
+    TODO: Integrate refresh state into the same state object as the local
+    collection to better check against the collection when refreshing.
+  </p>
   <h2>Books</h2>
   <app-book-list
     class="book-list"
