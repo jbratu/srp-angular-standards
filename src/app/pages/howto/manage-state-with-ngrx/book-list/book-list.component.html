@@ -1,0 +1,19 @@
+<button
+  *ngIf="(refreshState$ | async) !== 'requested'"
+  (click)="sendRefreshRequest()"
+>
+  Refresh List
+</button>
+<p *ngIf="(refreshState$ | async) === 'cancelled'" style="color: orangered">
+  Refresh cancelled
+</p>
+<p *ngIf="(refreshState$ | async) === 'confirmed'" style="color: green">
+  Refresh confirmed
+</p>
+<div class="book-item" *ngFor="let book of books">
+  <p>{{ book.volumeInfo.title }}</p>
+  <span> by {{ book.volumeInfo.authors }}</span>
+  <button (click)="add.emit(book.id)" data-test="add-button">
+    Add to Collection
+  </button>
+</div>
