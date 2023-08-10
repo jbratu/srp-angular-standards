@@ -36,31 +36,31 @@
             <th pSortableColumn="first_name">First Name <p-sortIcon field="first_name"></p-sortIcon></th>
             <th pSortableColumn="last_name">Last Name <p-sortIcon field="last_name"></p-sortIcon></th>
             <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
-            <th pSortableColumn="company">Company <p-sortIcon field="company"></p-sortIcon></th>
+            <!-- <th pSortableColumn="company">Company <p-sortIcon field="company"></p-sortIcon></th> -->
             <th>Action</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-contact>
           <tr>
-            <td>
+            <!-- <td>
               <p-tableCheckbox [value]="contact"></p-tableCheckbox>
-            </td>
-            <td style="width:20%; min-width:10rem;">
+            </td> -->
+            <td style="width:25%;">
               <span class="p-column-title">First Name</span>
               {{contact.first_name}}
             </td>
-            <td style="width:20%; min-width:10rem;">
+            <td style="width:25%;">
               <span class="p-column-title">Last Name</span>
               {{contact.last_name}}
             </td>
-            <td style="width:20%; min-width:10rem;">
+            <td style="width:25%;">
               <span class="p-column-title">Email</span>
               {{contact.email}}
             </td>
-            <td style="width:20%; min-width:10rem;">
+            <!-- <td style="width:20%; min-width:10rem;">
               <span class="p-column-title">Company</span>
               {{contact.company}}
-            </td>
+            </td> -->
             <td>
               <span class="p-column-title">Action</span>
               <div class="flex">
